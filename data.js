@@ -4,224 +4,273 @@ const productsData = [
         name: "Melodrama",
         artist: "Lorde",
         year: "2017",
-        rate: 8.8,
+        genre:["Synth pop","electropopart","pop"],
+        rating: 8.8,
         price: 25000,
-        img: "img/1.png"
+        category:"2010",
+        img: "./img/1.png"
     },
     {
         id: 2,
         name: "Fetch the Bolt Cutters",
         artist: "Fiona Apple",
         year: "2020",
-        rate: 10,
+        genre:["Art Pop","Progressive Pop"],
+        rating: 10,
         price: 24990,
-        img: 
+        category:"2020",
+        img: "./img/2.jpg",
     },
     {
         id: 3,
         name: "Post",
         artist: "Björk",
         year: "1995",
-        rate: 10,
+        genre:["Art Pop", "Electronic"],
+        rating: 10,
         price: 21990,
-        img: 
+        category:"1990",
+        img: "./img/3.jpg",
     },
     {
         id: 4,
         name: "Locura",
         artist: "Virus",
         year: "1985",
-        rate: 9.5,
+        genre:["Synthpop","New Wave"],
+        rating: 9.5,
         price: 15000,
-        img: 
+        category:"1980",
+        img: "./img/4/jpg",
     },
     {
         id: 5,
         name: "Graduation",
         artist: "Kanye West",
         year: "2007",
-        rate: 8.7,
+        genre:["Pop Rap","Electropop"],
+        rating: 8.7,
         price: 27990,
-        img: 
+        category:"2000",
+        img: "./img/5.jpg",
     },
     {
         id: 6,
         name: "Flower Boy",
         artist: "Tyler, The Creator",
         year: "2017",
-        rate: 8.5,
+        genre:["Experimental Hip Hop","Contemporary R&B"],
+        rating: 8.5,
         price: 19990,
-        img: 
+        category:"2010",
+        img: "./img/6.webp",
     },
     {
         id: 7,
         name: "Portamento",
         artist: "The Drums",
         year: "2011",
-        rate: 7.4,
+        genre:["Indie Pop","Synthpop","Post-Punk"],
+        rating: 7.4,
         price: 21990,
-        img: 
+        category:"2010",
+        img: "./img/7.webp",
     },
     {
         id: 8,
         name: "Tidal",
         artist: "Fiona Apple",
         year: "1996",
-        rate: 9,
+        genre:["Piano Rock","Art Pop","Jazz Pop"],
+        rating: 9,
         price: 25500,
-        img: 
+        category:"1990",
+        img: "./img/8.png",
     },
     {
         id: 9,
         name: "Pop 2",
         artist: "Charli XCX",
         year: "2017",
-        rate: 8.4,
+        genre:["Electropop","Hyperpop"],
+        rating: 8.4,
         price: 23990,
-        img: 
+        category:"2010",
+        img: "./img/9.webp",
     },
     {
         id: 10,
         name: " Synchronicity",
         artist: "The Police",
         year: "1983",
-        rate: 7.8,
+        genre:["New Wave","Pop Rock"],
+        rating: 7.8,
         price: 23600,
-        img: 
+        category:"1980",
+        img: "./img/10.webp",
     },
     {
         id: 11,
         name: "Experimental Jet Set, Trash and No Star",
         artist: "Sonic Youth",
         year: "1994",
-        rate: 6.7,
+        genre:["Noise Rock","Alternative Rock"],
+        rating: 6.7,
         price: 26000,
-        img: 
+        category:"1990",
+        img: "./img/11.webp",
     },
     {
         id: 12,
         name: "90125",
         artist: "Yes",
-        year: 1983,
-        rate: 7.2,
+        year: "1983",
+        genre:["Pop Rock","Progressive Pop"],
+        rating: 7.2,
         price: 24990,
-        img: 
+        category:"1980",
+        img: "./img/12.png",
     },
     {
         id: 13,
         name: "Hot Space",
         artist: "Queen",
         year: "1982",
-        rate: 7.3,
+        genre:["Pop Rock","Funk"],
+        rating: 7.3,
         price: 29990,
-        img: 
+        category:"1980",
+        img: "./img/13.webp",
     },
     {
         id: 14,
         name: "Sgt. Pepper's Lonely Hearts Club Band",
         artist: "The Beatles",
         year: "1967",
-        rate: 10,
+        genre:["Psychedelic Pop","Pop Rock"],
+        rating: 10,
         price: 35990,
-        img: 
+        category:"1960",
+        img: "./img/14.jpg",
     },
     {
         id: 15,
         name: "Pet Sounds",
         artist: "The Beach Boys",
         year: "1966",
-        rate: 9.4,
+        genre:["Baroque Pop"],
+        rating: 9.4,
         price: 34990,
-        img: 
+        category:"1960",
+        img: "./img/15.jpg",
     },
     {
         id: 16,
         name: "Yeezus",
         artist: "Kanye West",
-        year: 
-        rate:
-        price: 
-        img: 
+        year: "2013",
+        genre:["Experimental Hip Hop"],
+        rating: 9.5,
+        price: 25990,
+        category:"2010",
+        img: "./img/16.png",
     },
     {
         id: 17,
         name: "Paul's Boutique",
         artist: "Beastie Boys",
         year: "1989",
-        rate: 9.5,
+        genre:["East Coast Hip Hop","Experimental Hip Hop"],
+        rating: 9.5,
         price: 32990,
-        img: 
+        category:"1980",
+        img: "./img/17.png",
     },
     {
         id: 18,
-        name:
-        artist:
-        year:
-        rate:
-        price: 
-        img: 
+        name: "Future Listening!",
+        artist: "Towa Tei",
+        year: "1994",
+        genre: ["Nu Jazz","Bossa nova"],
+        rating: 7.4,
+        price: 17990,
+        category:"1990",
+        img: "./img/18.jpg",
     },
     {
         id: 19,
-        name:
-        artist:
-        year:
-        rate:
-        price: 
-        img: 
+        name: "Hounds of Love",
+        artist: "Kate Bush",
+        year: "1985",
+        genre:["Art Pop","Progressive Pop","Baroque Pop"],
+        rating: 10,
+        price: 24500,
+        category:"1980",
+        img: "./img/19.png",
     },
     {
         id: 20,
-        name:
-        artist:
-        year:
-        rate:
-        price: 
-        img: 
+        name: "Post Mortem",
+        artist: "Dillom",
+        year: "2021",
+        genre:["Pop Rap","Hardcore Hip Hop"],
+        rating: 8,
+        price: 25000,
+        category:"2020",
+        img: "./img/20.png",
     },
     {
         id: 21,
-        name:
-        artist:
-        year:
-        rate:
-        price: 
-        img: 
+        name: "Artaud",
+        artist: "Pescado Rabioso",
+        year: "1973",
+        rating: 10,
+        price: 13990,
+        category:"1970",
+        img: "./img/21.webp",
     },
     {
         id: 22,
-        name:
-        artist:
-        year:
-        rate:
-        price: 
-        img: 
+        name: "Visions",
+        artist: "Grimes",
+        year: "2012",
+        genre: ["Blues Rock","Psychedelic Rock"],
+        rating: 8.5,
+        price: 20990,
+        category:"2010",
+        img: "./img/22.png",
     },
     {
         id: 23,
-        name:
-        artist:
-        year:
-        rate:
-        price: 
-        img: 
+        name: "Rumours",
+        artist: "Fleetwood Mac",
+        year: "1977",
+        genre:["Pop Rock","Soft Rock"],
+        rating: 10,
+        price: 38000,
+        category:"1970",
+        img: "./img/23.jpg",
     },
     {
         id: 24,
-        name:
-        artist:
-        year:
-        rate:
-        price: 
-        img: 
+        name: "Rid of Me",
+        artist: "PJ Harvey",
+        year: "1993",
+        genre:["Alternative Rock"],
+        rating: 10,
+        price: 25990,
+        category:"1990",
+        img: "./img/24.jpg",
     },
     {
         id: 25,
-        name:
-        artist:
-        year:
-        rate:
-        price: 
-        img: 
+        name: "Goo",
+        artist: "Sonic Youth",
+        year: "1990",
+        genre:["Alternative Rock","Noise Rock"],
+        rating: 8.5,
+        price: 19990,
+        category:"1990",
+        img: "./img/25.jpg",
     }
 ]
