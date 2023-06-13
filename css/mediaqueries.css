@@ -1,0 +1,85 @@
+:root{
+    --primary-color: #00c1d1;
+    --bg-color: #1a1b1f;
+    --font-color: white;
+    --font-grey: #959595;
+    --secondary-color: #e5587d;
+}
+
+@media(width <= 1200px){
+    .hero-bottom-left,
+    .hero-bottom-right{
+        display: none;
+    }
+
+    .about-us{
+        flex-direction: column;
+   }
+
+    .about-us-left,
+    .about-us-right{
+    width: 100%;
+    }
+
+    .about-us-left{
+        padding-left: 30px;
+    }
+
+    .about-left-img-1{
+        align-self: center;
+    }
+
+    .about-left-img-2{
+        display: none;
+    }
+
+    .contact-left{
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media(width <= 850px){
+    .hero-img{
+        max-width: 600px;
+    }
+
+    .hero-bottom-middle{
+        display: none;
+    }
+}
+
+@media (width <= 650px) {
+    .hero-img{
+        width: 350px;
+    }
+
+    h1,
+    .hero__title--highlight{
+        font-size: 30px;
+        width: 350px;
+    }
+
+    .categories-container{
+        flex-direction: column;
+    }
+
+    .footer-nav ul{
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    #contact-form{
+        width: 400px;
+    }
+
+    .about-us h2 {
+        text-align: center;
+        padding: 0 10px 0 10px;
+    }
+
+    .about-us p {
+        text-align: center;
+        padding: 0 10px 0 10px;
+    }
+}
