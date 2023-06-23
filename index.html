@@ -18,12 +18,13 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animations.css">
     <link rel="stylesheet" href="./css/mediaqueries.css">
 
 </head>
 <body>
     <header>
-        <a href="#"><img src="./img/logoblanco3.png" alt="Groove Vinilos"></a>
+        <a href="index.html"><img src="./img/logoblanco3.png" alt="Groove Vinilos"></a>
 
             <nav>
                 <ul class="navbar-list">
@@ -47,7 +48,9 @@
         
         <div class="icons">
             <div class="cart-icon">
-                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-cart-shopping">
+                    <div class="cart-bubble">0</div>
+                </i>
            </div>
    
            <div class="menu-icon hidden">
@@ -79,7 +82,7 @@
                 <div class="hero-img">
                     <img src="./img/vinilo11.png" alt="">
                     <div class="centered">
-                        <h1>La música en su forma <span class="hero__title--highlight">más pura</span></h1>
+                        <h1 class="titleh1"></h1>
                         <a href="#productos" class="btn">Explorar</a>
                     </div>
                 </div>
@@ -183,8 +186,8 @@
                         <input type="email" id="email" placeholder="E-mail" class="input">
                     </label>
 
-                    <textarea name="comentarios" form="contact-right" cols="50" rows="4">Ingrese su consulta aqui...</textarea>
-
+                    <textarea id="comentarios" name="comentarios" form="contact-right" cols="50" rows="4" placeholder="Ingrese su consulta aqui..."></textarea>
+                    <small class="error-msg"></small>
                     <input type="submit" class="btn btn-submit">
                 </form>
             </div>

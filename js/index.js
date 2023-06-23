@@ -2,23 +2,33 @@ const productsContainer = document.querySelector(".products-container");
 const categoriesContainer = document.querySelector(".categories-container");
 const categoriesList = document.querySelectorAll(".category");
 const showMoreBtn = document.querySelector(".view-more");
+
 const logOptions = document.querySelector(".header-right");
 const mobileLogin = document.querySelector(".login");
 const mobileSignin = document.querySelector(".signin");
 const logOut = document.querySelector(".log-out");
 const mobileLogOut = document.querySelector(".mobile-log-out");
+const title = document.querySelector(".titleh1");
+
 const menuIcon = document.querySelector(".menu-icon");
 const cartIcon = document.querySelector(".cart-icon");
 const overlay = document.querySelector(".overlay");
 const menu = document.querySelector(".navbar-list");
 const menuNav = document.querySelector(".nav");
+
 const cart = document.querySelector(".cart");
 const cartProducts = document.querySelector(".cart-container");
 const deleteBtn = document.querySelector(".btn-delete");
 const total = document.querySelector(".total");
 const buyBtn = document.querySelector(".buy"); 
 const successModal = document.querySelector(".add-modal");
+const cartBubble = document.querySelector(".cart-bubble");
 
+const contactForm = document.getElementById("contact-form");
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const textInput = document.getElementById("comentarios");
+const message = document.querySelector(".error-msg");
 
 //----------------------------FUNCIONES PARA MOSTRAR PRODUCTOS----------------------------
 
@@ -134,6 +144,8 @@ const isInactiveFilterBtn = (element) => {
 
   //----------------------------FUNCIONES PARA MOSTRAR EL USUARIO O EL LOGIN----------------------------
 
+  const mediaQuery = window.matchMedia('(min-width: 1200px)');
+
   //Funcion que indica si la sesion esta iniciada o no
   const isUserLogged = () => {
     return (sessionStorage.getItem("activeUser") != null)
@@ -148,8 +160,13 @@ const isInactiveFilterBtn = (element) => {
 
   //Muestra el la opcion de salir si el usuario esta loggeado
   const showLogOut = () => {
-    logOut.classList.remove("hidden");
-    mobileLogOut.classList.remove("hidden");
+    if (!mediaQuery.matches){
+      mobileLogOut.classList.remove("hidden");
+      logOut.classList.add("hidden");
+    } else {
+      logOut.classList.remove("hidden");
+      mobileLogOut.classList.add("hidden");
+    }
   }
 
   //Funcion que elimina al usuario del session Storage si cerro sesion
@@ -158,15 +175,30 @@ const isInactiveFilterBtn = (element) => {
   }
 
   const showUserOrLog = () => {
+    const innerSpan = document.createElement("span");
+    innerSpan.className = "hero__title--highlight";
     if (isUserLogged()){
       removeLogOption();
       showLogOut();
+      const user = sessionStorage.getItem("activeUser");
+      title.innerHTML = "Hola, ";
+      innerSpan.textContent = `${JSON.parse(user).name}!`;
+      title.appendChild(innerSpan);
+    } else {
+      title.innerHTML = "La música en su forma ";
+      innerSpan.textContent = "más pura";
+      title.appendChild(innerSpan);
     }
   }
 
   const logOutSession = () => {
     removeActiveUser();
     location.reload();
+    title.innerHTML = "La música en su forma ";
+    const innerSpan = document.createElement("span");
+    innerSpan.className = "hero__title--highlight";
+    innerSpan.textContent = "más pura";
+    title.appendChild(innerSpan);
   }
 
 
@@ -284,6 +316,7 @@ const isInactiveFilterBtn = (element) => {
     showTotal();
     disableBtn1(buyBtn);
     disableBtn(deleteBtn);
+    renderCartBubble(cartItems); 
   }
 
   const addUnitToProduct = (product) => {
@@ -368,6 +401,10 @@ const isInactiveFilterBtn = (element) => {
     updateCartState();
   }
 
+  const renderCartBubble = (cartItems) => {
+    cartBubble.textContent = cartItems.reduce((acc, cur) => acc + cur.quantity, 0);
+  };
+
   const resetCartItems = () => {
     cartItems = [];
     updateCartState();
@@ -393,7 +430,106 @@ const isInactiveFilterBtn = (element) => {
   };
   
   //----------------------------FUNCIONES PARA VALIDAR FORM DE CONTACTO----------------------------
+  const isEmpty = (input) => {
+    console.log(input.value);
+    return !input.value.trim().length;
+  };
 
+  const isEmailValid = (input) => {
+    const regex = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,4})+$/;
+    return regex.test(input.value.trim());
+  };
+
+  const isLetterOnly = (input) => {
+    const regex = /^[A-Za-z\s]*$/;
+    return regex.test(input.value.trim()); 
+  }
+
+  const isBetween = (input, min, max) => {
+    return input.value.length >= min && input.value.length < max;
+  };
+
+
+  const checkNameInput = (input) => {
+    let valid = false;
+    const minChar = 3;
+    const maxChar = 20;
+  
+    if (isEmpty(input)) {
+      showError("Por favor, ingrese su nombre");
+      return;
+    }
+    if (!isBetween(input, minChar, maxChar)) {
+      showError(
+        `El nombre debe tener entre ${minChar} y ${maxChar} caracteres.`
+      );
+      return;
+    }
+    if (!isLetterOnly(input)){
+      showError("El nombre solo puede contener letras");
+      return;
+    }
+    valid = true;
+    return valid;
+  };
+
+  const checkEmail = (input) => {
+    let valid = false;
+  
+    if (isEmpty(input)) {
+      showError("El mail es obligatorio");
+      return;
+    }
+  
+    if (!isEmailValid(input)) {
+      showError("El mail no es valido");
+      return;
+    }
+  
+    valid = true;
+    return valid;
+  };
+
+  const checkTextArea = (input) => {
+    const minChar = 3;
+    const maxChar = 150;
+    let valid = false;
+  
+    if (isEmpty(input)) {
+      showError("Por favor, ingrese su consulta");
+      return;
+    }
+
+    if (!isBetween(input, minChar, maxChar)) {
+      showError(
+        `La consulta debe tener entre ${minChar} y ${maxChar} caracteres.`
+      );
+      return;
+    }
+  
+    valid = true;
+    return valid;
+  };
+
+  const showError = (msg) =>{
+    message.innerHTML = `${msg}`;
+  } 
+
+  const contact = (e) => {
+    e.preventDefault();
+  
+    let isNameValid = checkNameInput(nameInput);
+    let isEmailValid = checkEmail(emailInput);
+    let isTextAreaValid = checkTextArea(textInput);
+  
+    let isValidForm = isNameValid && isEmailValid && isTextAreaValid;
+    if (isValidForm){
+      alert("Gracias por contactarnos! Nuestro equipo revisará su consulta y le responderemos lo antes posible.");
+      message.innerHTML = "";
+      textInput.value = "";
+      contactForm.reset();
+    }
+  };
 
   //----------------------------FUNCION INIT----------------------------
   const init = () => {
@@ -417,8 +553,11 @@ const isInactiveFilterBtn = (element) => {
     cartProducts.addEventListener("click", handleQuantity);
     buyBtn.addEventListener("click", completeBuy);
     deleteBtn.addEventListener("click", deleteCart);
+    renderCartBubble(cartItems);
     disableBtn1(buyBtn);
     disableBtn(deleteBtn);
+
+    contactForm.addEventListener("submit", contact);
   };
   
   init();

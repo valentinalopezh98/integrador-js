@@ -1,0 +1,219 @@
+@keyframes fade {
+    from  {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+
+@keyframes slide-up{
+   from  {
+        transform: translateY(100px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}  
+  
+@keyframes slide-left {
+    from  {
+         transform: translateX(100px);
+     }
+     to {
+         transform: translateX(0);
+     }
+} 
+
+@keyframes slide-right {
+    from  {
+         transform: translateX(-100px);
+     }
+     to {
+         transform: translateX(0);
+     }
+} 
+
+@keyframes slide-down {
+    from  {
+         transform: translateY(-100px);
+     }
+     to {
+         transform: translateY(0);
+     }
+} 
+
+
+.centered{
+    animation: fade 1s ease-in;
+}
+
+.hero-img{
+    animation: fade 1s ease-in, slide-up 0.7s ease-in;
+}
+
+.hero-bottom-left{
+    animation: fade 1s ease-in, slide-right 0.8s ease-in;
+}
+
+.hero-bottom-right{
+    animation: fade 1s ease-in, slide-left 0.8s ease-in;
+}
+
+.hero-bottom-middle .album-preview:nth-child(1){
+    animation: fade 1s ease-in, slide-up 0.1s ease-in;
+}
+
+.hero-bottom-middle .album-preview:nth-child(2){
+    animation: fade 1s ease-in, slide-up 0.2s ease-in;
+}
+
+.hero-bottom-middle .album-preview:nth-child(3){
+    animation: fade 1s ease-in, slide-up 0.3s ease-in;
+}
+
+.hero-bottom-middle .album-preview:nth-child(4){
+    animation: fade 1s ease-in, slide-up 0.4s ease-in;
+}
+
+.hero-bottom-middle .album-preview:nth-child(5){
+    animation: fade 1s ease-in, slide-up 0.5s ease-in;
+}
+
+.hero-bottom-middle .album-preview:nth-child(6){
+    animation: fade 1s ease-in, slide-up 0.6s ease-in;
+}
+
+.hero-bottom-middle .album-preview:nth-child(7){
+    animation: fade 1s ease-in, slide-up 0.7s ease-in;
+}
+
+.hero-bottom-middle .album-preview:nth-child(8){
+    animation: fade 1s ease-in, slide-up 0.8s ease-in;
+}
+
+.hero-bottom-middle .album-preview:nth-child(9){
+    animation: fade 1s ease-in, slide-up 0.9s ease-in;
+}
+
+.hero-bottom-middle .album-preview:nth-child(10){
+    animation: fade 1s ease-in, slide-up 1s ease-in;
+}
+
+.hero-bottom-middle .album-preview:nth-child(11){
+    animation: fade 1s ease-in, slide-up 1.1s ease-in;
+}
+
+.hero-bottom-middle .album-preview:nth-child(12){
+    animation: fade 1s ease-in, slide-up 1.2s ease-in;
+}
+
+nav ul li a:hover,
+.header-right a:hover,
+.header-right i:hover
+{
+    transform: scale(1.02);
+    transition: all 0.1s ease-in;
+    color: var(--primary-color);
+}
+
+.log-out:hover{
+    color: var(--primary-color);
+    transform: scale(1.02);
+    transition: all 0.1s ease-in;
+}
+
+.quantity-handler:hover{
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: all 0.1s ease-in;
+}
+
+.btn-delete:hover{
+    color: var(--primary-color);
+    transform: scale(1.02);
+    transition: all 0.1s ease-in;
+}
+
+.centered a:hover{
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    transition: all 0.1s ease-in;
+}
+
+.hero-bottom-left a:hover{
+    color: var(--primary-color);
+    transform: scale(1.02);
+    transition: all 0.1s ease-in;
+}
+
+.album-preview:hover{
+    transform: scale(1.1);
+    filter: brightness(1);
+    transition: all 0.1s ease-in;
+}
+
+.btn:hover{
+    background-color: var(--font-color);
+    color: var(--bg-color);
+    transition: all 0.1s ease-in;
+}
+
+.card:hover{
+    border-bottom: 1px solid var(--font-color);
+    transform: scale(1.02);
+    transition: all 0.1s ease-in;
+}
+
+.add:hover{
+    color: var(--primary-color);
+    transform: scale(1.02);
+    transition: all 0.1s ease-in;
+}
+
+.redes a i:hover{
+    color: var(--primary-color);
+    transform: scale(1.02);
+    transition: all 0.1s ease-in;
+}
+
+footer a:hover{
+    color: var(--primary-color);
+    transform: scale(1.02);
+    transition: all 0.1s ease-in;
+}
+
+
+/*
+.explore__card:hover {
+    transform: scale(1.02);
+    transition: all 0.1s ease-in;
+}
+
+.button-white:hover {
+    border: 1px solid var(--light-gray);
+    color: var(--light-gray);
+    transform: scale(1.02);
+    transition: all 0.15s ease-in;
+}
+
+.button-black:hover{
+    text-decoration: none;
+    background-color: var(--gray);
+    transform: scale(1.02);
+    transition: all 0.15s ease-in;
+}
+
+.plan-button:hover {
+    background-color: var(--gray);
+    transform: scale(1.02);
+    transition: all 0.15s ease-in;
+}
+
+.submit-button:hover {
+    background-color: var(--gray);
+    transform: scale(1.02);
+    transition: all 0.15s ease-in;
+}
+*/

@@ -68,12 +68,7 @@ nav ul li a{
     font-weight: 100;
 }
 
-nav ul li a:hover,
-.header-right a:hover,
-.header-right i:hover
-{
-    color: var(--primary-color);
-}
+
 
 .header-right{
     display: flex;
@@ -116,9 +111,6 @@ nav ul li a:hover,
     cursor: pointer;
 }
 
-.log-out:hover{
-    color: var(--primary-color);
-}
 
 .navbar-list{
     display: flex;
@@ -177,6 +169,27 @@ nav ul li a:hover,
     min-width: 375px;
     color: var(--font-color);
 }
+
+.cart-icon i{
+    position: relative;
+}
+
+.cart-bubble {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    text-align: center;
+    background: var(--secondary-color);
+    color: var(--font-color);
+    font-size: 10px;
+    font-weight: 600;
+    height: 18px;
+    width: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
 
 .cart-container{
     width: 100%;
@@ -262,6 +275,7 @@ nav ul li a:hover,
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     gap: 10px;
 }
 
@@ -273,10 +287,6 @@ nav ul li a:hover,
     border-radius: 8px;
 }
 
-.quantity-handler:hover{
-    border: 1px solid var(--primary-color);
-    cursor: pointer;
-}
 
 .divider {
     margin-top: 20px;
@@ -293,9 +303,7 @@ nav ul li a:hover,
     cursor: pointer;
 }
 
-.btn-delete:hover{
-    color: var(--primary-color);
-}
+
 
 /* Main */
 main,
@@ -383,10 +391,7 @@ h1{
     font-weight: 600;
 }
 
-.centered a:hover{
-    background-color: var(--bg-color);
-    color: var(--font-color);
-}
+
 
 .hero-bottom-section{
     margin: 0 50px;
@@ -413,9 +418,6 @@ h1{
     color: var(--font-color);
 }
 
-.hero-bottom-left a:hover{
-    color: var(--primary-color);
-}
 
 .hero-bottom-left a i {
     font-size: 20px;
@@ -440,11 +442,6 @@ h1{
     filter: brightness(0.6);
 }
 
-.album-preview:hover{
-    width: 40px;
-    height: 40px;
-    filter: brightness(1);
-}
 
 .album-preview img{
     width: 100%;
@@ -461,11 +458,6 @@ h1{
     text-transform: uppercase;
     position: relative;
     cursor: pointer;
-}
-
-.btn:hover{
-    background-color: var(--font-color);
-    color: var(--bg-color);
 }
 
 .hidden{
@@ -631,6 +623,7 @@ h2 span{
 .category:hover{
     color: var(--primary-color);
     cursor: pointer;
+    transition: all 0.1s ease-in;
 }
 
 .selected{
@@ -668,10 +661,6 @@ h2 span{
     position: relative;
     margin-bottom: 10px;
     padding-bottom: 10px;
-}
-
-.card:hover{
-    border-bottom: 1px solid var(--font-color);
 }
 
 .rate{
@@ -761,10 +750,6 @@ h2 span{
     cursor: pointer;
 }
 
-.add:hover{
-    color: var(--primary-color);
-}
-
 .add-to-cart .add i {
     font-size: 12px;
 }
@@ -807,9 +792,6 @@ h2 span{
     font-size: 30px;
 }
 
-.redes a i:hover{
-    color: var(--primary-color);
-}
 
 .contact-right p {
     margin-bottom: 20px;
@@ -842,6 +824,13 @@ textarea{
     cursor: pointer;
 }
 
+.error-msg{
+    width: 100%;
+    text-align: center;
+    color: #e5587d;
+    font-size: 14px;
+}
+
 
 /* Footer */
 
@@ -855,6 +844,7 @@ footer{
     margin-top: 60px;
     border-top: 1px solid var(--font-grey);
     gap: 30px;
+    margin-bottom: 5px;
 }
 
 footer a img{
@@ -872,9 +862,6 @@ footer a{
     color: var(--font-color);
 }
 
-footer a:hover{
-    color: var(--primary-color);
-}
 
 footer a i {
     font-size: 20px;
