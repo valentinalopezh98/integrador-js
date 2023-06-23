@@ -7,7 +7,7 @@
     --secondary-color: #e5587d;
 }
 
-@media(width <= 1200px){
+@media(max-width: 1200px){
     header{
         justify-content: space-between;
         padding: 0 50px;
@@ -75,7 +75,7 @@
     }
 }
 
-@media(width <= 850px){
+@media(max-width: 850px){
     .hero-img{
         max-width: 600px;
     }
@@ -85,7 +85,15 @@
     }
 }
 
-@media (width <= 650px) {
+@media (max-width: 650px) {
+
+    header{
+        justify-content: space-around;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
     .hero-img{
         width: 350px;
     }
@@ -106,16 +114,81 @@
     }
 
     #contact-form{
-        width: 400px;
+        max-width: 350px;
     }
 
     .about-us h2 {
+        max-width: 350px;
         text-align: center;
         padding: 0 10px 0 10px;
     }
 
     .about-us p {
+        max-width: 350px;
         text-align: center;
         padding: 0 10px 0 10px;
+    }
+
+    
+    .open-cart{
+        width: 350px;
+        top: 80px;
+        right: 0;
+        height: calc(100vh - 80px);
+        padding: 50px 20px;
+        gap: 20px;
+        overflow-y: scroll;
+        min-width: 350px;
+    }
+
+    .product-name{
+        max-width: 80px;
+    }
+    
+    .product-artist{
+        max-width: 80px;
+    }
+
+    .contact-right p {
+        text-align: center;
+    }
+
+    .contact-info{
+        max-width: 350px;
+    }
+
+    .about-us{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-us-left{
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-left-img-1{
+        width: 345px;
+        height: 345px;
+        border-radius: 50%;
+        overflow: hidden;
+        object-fit: cover;
+        align-self: center;
+    }
+
+    .categories-container{
+        max-width: 350px;
+        gap: 20px;
+    }
+
+    .products-container{
+        max-width: 350px;
+        padding: 20px 10px;
+    }
+
+    footer{
+        width: 350px;
     }
 }
