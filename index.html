@@ -31,9 +31,9 @@
                     <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
                     <li><a href="#productos" class="nav-link">Productos</a></li>
                     <li><a href="#contacto" class="nav-link">Contacto</a></li>
-                    <li><a href="login.html" class="mobile">Ingresar</a></li>
-                    <li><a href="signup.html" class="mobile">Registrarse</a></li>
-                    <li><a href="index.html" class="mobile">Salir<i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
+                    <li class="login"><a href="login.html" class="mobile">Ingresar</a></li>
+                    <li class="signin"><a href="signup.html" class="mobile">Registrarse</a></li>
+                    <li class="hidden mobile-log-out"><a href="index.html" class="mobile">Salir <i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
                 </ul>
             </nav>
 
@@ -59,15 +59,6 @@
             <h3>Tus discos</h3>
   
             <div class="cart-container">
-                <div class="cart-product">
-                    <div class="img-container">
-                        <img src="./img/11.webp" alt="">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-name">MELODRAMA</p>
-                        
-                    </div>
-                </div>
             </div>
   
             <span class="divider"></span>
@@ -77,8 +68,8 @@
               <span class="total">$232323</span>
             </div>
 
-            <button class="btn">Comprar</button>
-            <button class="btn delete">Vaciar carrito</button>
+            <button class="btn buy">Comprar</button>
+            <button class="btn-delete">Vaciar carrito</button>
           </div>
        <div class="overlay"></div>
     </header>
@@ -89,7 +80,7 @@
                     <img src="./img/vinilo11.png" alt="">
                     <div class="centered">
                         <h1>La música en su forma <span class="hero__title--highlight">más pura</span></h1>
-                        <a href="#" class="btn">Explorar</a>
+                        <a href="#productos" class="btn">Explorar</a>
                     </div>
                 </div>
         </section>
@@ -123,7 +114,7 @@
             </div>
         </section>
 
-        <section class="about-us">
+        <section class="about-us" id="nosotros">
             <div class="about-us-left">
                 <div class="about-left-img-1">
                     <img src="./img/local1.jpg" alt="">
@@ -145,7 +136,7 @@
 
         </section>
 
-        <section class="products-section">
+        <section class="products-section" id="productos">
             <div class="categories-container">
                 <p>año</p>
                 <ul>
@@ -159,7 +150,8 @@
                     <li class="category" data-category="2020">20</li>
                 </ul>
             </div>
-            <div class="products-container"></div>
+            <div class="products-container">
+            </div>
 
             <button class="btn view-more">Ver más</button>
         </section>
@@ -209,15 +201,15 @@
         </div>
         <nav class="footer-nav">
             <ul>
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Nosotros</a></li>
-                <li><a href="">Productos</a></li>
-                <li><a href="">Contacto</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
         <p>Groove Vinilos ©</p>
     </footer>
-
+    <div class="add-modal"></div>
     <script src="./js/data.js"></script>
     <script src="./js/index.js"></script>
 </body>

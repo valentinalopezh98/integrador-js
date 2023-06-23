@@ -16,6 +16,11 @@
     font-size: 1rem;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; 
+}
+
 body{
     width: 100%;
     min-height: 100vh;
@@ -120,7 +125,6 @@ nav ul li a:hover,
     flex-direction: row;
     align-items: center;
     justify-content:center; 
-    gap: 200px;
 }
 
 .overlay {
@@ -131,7 +135,7 @@ nav ul li a:hover,
     width: 100%;
     z-index: 1; 
     background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    box-shadow: 0 8px 32px 0 rgba(1, 2, 5, 0.37);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     display: none;
@@ -145,10 +149,6 @@ nav ul li a:hover,
     width: 70%;
     z-index: 2;
     background-color: var(--bg-color);
-    border-radius: 10px 0 0 10px;
-    border-left: 2px solid var(--secondary-color);
-    border-top: 2px solid var(--secondary-color);
-    border-bottom: 2px solid var(--secondary-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -161,16 +161,12 @@ nav ul li a:hover,
 
 .open-cart{
     position: absolute;
-    width: 70%;
+    width: 450px;
     top: 80px;
     right: 0;
     height: calc(100vh - 80px);
     padding: 50px 30px;
     background-color: var(--bg-color);
-    border-radius: 10px 0 0 10px;
-    border-left: 2px solid var(--secondary-color);
-    border-top: 2px solid var(--secondary-color);
-    border-bottom: 2px solid var(--secondary-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -182,12 +178,123 @@ nav ul li a:hover,
     color: var(--font-color);
 }
 
+.cart-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
 .open-cart .btn{
     max-width: 300px;
 }
 
 .show-overlay{
     display: block;
+}
+
+.cart-product{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid var(--font-color);
+    border-radius: 8px;
+}
+
+.product{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.product-img-container{
+    width: 80px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.product-img-container img{
+    width: 100%;
+}
+
+.product-info{
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.product-name{
+    max-width: 150px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.product-artist{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 300;
+    max-width: 150px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.product-price{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.product-handler{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.quantity-handler{
+    width: 30px;
+    height: 30px;
+    padding: 4px 8px;
+    border: 1px solid var(--font-color);
+    border-radius: 8px;
+}
+
+.quantity-handler:hover{
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+}
+
+.divider {
+    margin-top: 20px;
+    border: 1px solid var(--font-color);
+    width: 100%;
+}
+
+.btn-delete{
+    margin-top: 10px;
+    border: none;
+    background-color: var(--bg-color);
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn-delete:hover{
+    color: var(--primary-color);
 }
 
 /* Main */
@@ -200,6 +307,32 @@ main,
     justify-content: center;
     align-items: center;
 }
+
+.cart-total{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add-modal {
+    padding: 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--font-color);
+    background-color: var(--primary-color);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    transition: all 0.5s ease-out;
+    transform: translateY(200%);
+  }
+  
+  .active-modal{
+    transform: translateY(0);
+    transition: all 0.5s ease-in;
+  }
 
 /* Hero  */
 section{
@@ -248,6 +381,11 @@ h1{
     color: black;
     text-transform: uppercase;
     font-weight: 600;
+}
+
+.centered a:hover{
+    background-color: var(--bg-color);
+    color: var(--font-color);
 }
 
 .hero-bottom-section{
@@ -325,6 +463,11 @@ h1{
     cursor: pointer;
 }
 
+.btn:hover{
+    background-color: var(--font-color);
+    color: var(--bg-color);
+}
+
 .hidden{
     display: none;
 }
@@ -338,6 +481,31 @@ h1{
     top: 20%;
     left: 4%;
     z-index: -1;
+}
+
+
+.disabled {
+    cursor: not-allowed;
+    color: var(--font-grey);
+}
+
+.disabled:hover{
+    cursor: not-allowed;
+    color: var(--font-grey);
+}
+
+.disabled-btn{
+    background-color: var(--font-grey);
+    border: 2px solid var(--font-grey);
+    color: var(--bg-color);
+    cursor: not-allowed;
+}
+
+.disabled-btn:hover{
+    background-color: var(--font-grey);
+    border: 2px solid var(--font-grey);
+    color: var(--bg-color);
+    cursor: not-allowed;
 }
 
 /* About us  */
@@ -487,7 +655,7 @@ h2 span{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 35px;
 }
 
 .card{
@@ -499,6 +667,11 @@ h2 span{
     gap: 15px;
     position: relative;
     margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.card:hover{
+    border-bottom: 1px solid var(--font-color);
 }
 
 .rate{
@@ -518,6 +691,7 @@ h2 span{
 .card img{
     width: 100%
 }
+
 
 .album-data{
     width: 100%;
@@ -577,18 +751,21 @@ h2 span{
     gap: 5px;
 }
 
-.add-to-cart:hover{
-    color: var(--primary-color);
+.add{
+    border: none;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
     cursor: pointer;
 }
 
-.add-to-cart p {
-    font-size: 12px;
-    font-weight: 500;
-    text-transform: uppercase;
+.add:hover{
+    color: var(--primary-color);
 }
 
-.add-to-cart i {
+.add-to-cart .add i {
     font-size: 12px;
 }
 
@@ -628,6 +805,10 @@ h2 span{
 
 .contact .redes a i{
     font-size: 30px;
+}
+
+.redes a i:hover{
+    color: var(--primary-color);
 }
 
 .contact-right p {

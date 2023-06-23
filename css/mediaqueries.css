@@ -39,6 +39,11 @@
     .mobile{
         display: block;
     }
+
+    .navbar-list{
+        display: none;
+    }
+
     .navbar-list nav ul{
         flex-direction: column;
     }
