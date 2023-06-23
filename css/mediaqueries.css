@@ -1,15 +1,46 @@
 :root{
     --primary-color: #00c1d1;
     --bg-color: #1a1b1f;
+    --bg-menu: #1d1c1c;
     --font-color: white;
     --font-grey: #959595;
     --secondary-color: #e5587d;
 }
 
 @media(width <= 1200px){
+    header{
+        justify-content: space-between;
+        padding: 0 50px;
+    }
+
     .hero-bottom-left,
     .hero-bottom-right{
         display: none;
+    }
+
+    .cart-icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+    }
+    
+    .menu-icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+    }
+
+    .header-right{
+        display: none;
+    }
+
+    .mobile{
+        display: block;
+    }
+    .navbar-list nav ul{
+        flex-direction: column;
     }
 
     .about-us{

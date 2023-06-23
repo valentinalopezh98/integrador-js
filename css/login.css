@@ -75,7 +75,7 @@ body {
     opacity: 50%;
 }
 
-.form {
+#form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -93,7 +93,7 @@ body {
     border: none;
     height: 20px;
     background-color: transparent;
-    border-bottom: 1px solid #777777;;
+    border-bottom: 1px solid #777777;
 }
 
 .input::placeholder{
@@ -113,29 +113,38 @@ body {
     flex-direction: row;
 }
 
+#error-message{
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+
 .btn{
-    background-color: var(--font-color);
-    color: black;
-    text-transform: uppercase;
-    font-weight: 600;
+    width: 100%;
+    background-color:rgba(170, 160, 160, 0.11);
     border: 2px solid white;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8px 40px;
+    padding: 10px 50px;
+    color: white;
+    text-transform: uppercase;
     position: relative;
     cursor: pointer;
+    margin-top: 15px;
 }
 
-.btn::after{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: 2px solid white;
-    top: 20%;
-    left: 4%;
-    z-index: -2;
+.btn:hover{
+    background-color: var(--font-grey);
+}
+
+.btn-submit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
 }
 
 .option-text {
@@ -146,3 +155,19 @@ body {
     color: var(--primary-color);
 }
 
+.input-container.error input{
+    border-bottom: 2px solid #e62a5c;
+}
+
+.input-container small{
+    margin-top: 5px;
+    color: #e62a5c;
+    text-align: center;
+    display: none;
+    max-width: 180px;
+    font-size: 10px;
+}
+
+.input-container.success input{
+    border-bottom: 2px solid #1fc42f;
+}

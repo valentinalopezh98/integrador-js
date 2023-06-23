@@ -24,22 +24,63 @@
 <body>
     <header>
         <a href="#"><img src="./img/logoblanco3.png" alt="Groove Vinilos"></a>
-        
-        <nav>
-            <ul>
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Nosotros</a></li>
-                <li><a href="">Productos</a></li>
-                <li><a href="">Contacto</a></li>
-            </ul>
-        </nav>
+
+            <nav>
+                <ul class="navbar-list">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                    <li><a href="#productos" class="nav-link">Productos</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                    <li><a href="login.html" class="mobile">Ingresar</a></li>
+                    <li><a href="signup.html" class="mobile">Registrarse</a></li>
+                    <li><a href="index.html" class="mobile">Salir<i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
+                </ul>
+            </nav>
 
         <div class="header-right">
             <a href="login.html">Ingresar</a>
             <p>/</p>
             <a href="signup.html">Registrarse</a>
-            <i class="fa-solid fa-cart-shopping"></i>
         </div>
+        <small class="log-out hidden">Salir <i class="fa-solid fa-arrow-right-from-bracket"></i></small>
+
+        
+        <div class="icons">
+            <div class="cart-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+           </div>
+   
+           <div class="menu-icon hidden">
+               <i class="fa-solid fa-bars"></i>
+           </div>
+        </div>
+
+        <div class="cart">
+            <h3>Tus discos</h3>
+  
+            <div class="cart-container">
+                <div class="cart-product">
+                    <div class="img-container">
+                        <img src="./img/11.webp" alt="">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-name">MELODRAMA</p>
+                        
+                    </div>
+                </div>
+            </div>
+  
+            <span class="divider"></span>
+  
+            <div class="cart-total">
+              <p>Total:</p>
+              <span class="total">$232323</span>
+            </div>
+
+            <button class="btn">Comprar</button>
+            <button class="btn delete">Vaciar carrito</button>
+          </div>
+       <div class="overlay"></div>
     </header>
 
     <main>
@@ -108,109 +149,19 @@
             <div class="categories-container">
                 <p>año</p>
                 <ul>
-                    <li class="category">∞</li>
-                    <li class="category">60</li>
-                    <li class="category">70</li>
-                    <li class="selected">80</li>
-                    <li class="category">90</li>
-                    <li class="category">00</li>
-                    <li class="category">10</li>
-                    <li class="category">20</li>
+                    <li class="category selected">∞</li>
+                    <li class="category" data-category="1960">60</li>
+                    <li class="category" data-category="1970">70</li>
+                    <li class="category" data-category="1980">80</li>
+                    <li class="category" data-category="1990">90</li>
+                    <li class="category" data-category="2000">00</li>
+                    <li class="category" data-category="2010">10</li>
+                    <li class="category" data-category="2020">20</li>
                 </ul>
             </div>
-            <div class="products-container">
-                <div class="card">
-                    <div class="rate">10</div>
-                    <img src="./img/1.png" alt="">
+            <div class="products-container"></div>
 
-                    <div class="album-data">
-                        <p class="genre-year">Pop, Synthpop / 2017</p>
-                        <p class="name-artist">Melodrama / <span>Lorde</span></p>
-                    </div>
-
-                    <div class="buy">
-                        <p class="price">$23444</p>
-                        <div class="add-to-cart">
-                            <p>Agregar</p>
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="rate">10</div>
-                    <img src="./img/1.png" alt="">
-
-                    <div class="album-data">
-                        <p class="genre-year">Pop, Synthpop / 2017</p>
-                        <p class="name-artist">Melodrama / <span>Lorde</span></p>
-                    </div>
-
-                    <div class="buy">
-                        <p class="price">$23444</p>
-                        <div class="add-to-cart">
-                            <p>Agregar</p>
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="rate">10</div>
-                    <img src="./img/1.png" alt="">
-
-                    <div class="album-data">
-                        <p class="genre-year">Pop, Synthpop / 2017</p>
-                        <p class="name-artist">Melodrama / <span>Lorde</span></p>
-                    </div>
-
-                    <div class="buy">
-                        <p class="price">$23444</p>
-                        <div class="add-to-cart">
-                            <p>Agregar</p>
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="rate">10</div>
-                    <img src="./img/1.png" alt="">
-
-                    <div class="album-data">
-                        <p class="genre-year">Pop, Synthpop / 2017</p>
-                        <p class="name-artist">Melodrama / <span>Lorde</span></p>
-                    </div>
-
-                    <div class="buy">
-                        <p class="price">$23444</p>
-                        <div class="add-to-cart">
-                            <p>Agregar</p>
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="rate">10</div>
-                    <img src="./img/1.png" alt="">
-
-                    <div class="album-data">
-                        <p class="genre-year">Pop, Synthpop / 2017</p>
-                        <p class="name-artist">Melodrama / <span>Lorde</span></p>
-                    </div>
-
-                    <div class="buy">
-                        <p class="price">$23444</p>
-                        <div class="add-to-cart">
-                            <p>Agregar</p>
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <button class="btn">Ver más</button>
+            <button class="btn view-more">Ver más</button>
         </section>
 
         <section class="contact" id="contacto">
@@ -267,8 +218,7 @@
         <p>Groove Vinilos ©</p>
     </footer>
 
-    <footer>
-
-    </footer>
+    <script src="./js/data.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>

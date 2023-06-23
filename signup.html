@@ -31,32 +31,34 @@
                 <div class="card">
                     <img src="./img/vinilo1a.png" alt="">
         
-                    <form action="" class="form">
+                    <form action="" id="form">
 
-                        <label for="name">
+                        <div class="input-container">
                             <span class="material-icons login-icon">
                                 person
                             </span>
                             <input type="text" placeholder="Nombre" id="name" class="input">
-                        </label>
-        
-
-                        <label for="mail">
+                            <small></small>
+                        </div>
+                    
+                        <div class="input-container">
                             <span class="material-icons login-icon">
                                 email
                             </span>
-                            <input type="email" placeholder="Email" id="mail" class="input">
-                        </label>
+                            <input type="email" placeholder="Email" id="email" class="input">
+                            <small></small>
+                        </div>
         
-                        <label for="password">
+                        <div class="input-container">
                             <span class="material-icons login-icon">
                                 lock
                             </span>
                             <input type="password" placeholder="Contraseña" id="password" class="input">
-                        </label>
+                            <small></small>
+                        </div>
         
                        
-                        <a href="./index.html" class="btn">Registrarme</a>
+                        <input type="submit" class="btn btn-submit" value="Registrarme">
         
                         <a href="./login.html" class="option-text option-text-hover">Ya tengo una cuenta</a>
                     </form>
@@ -64,6 +66,7 @@
            
         </main>
 
+        <script src="./js/signup.js"></script>
    
 </body>
 </html>
