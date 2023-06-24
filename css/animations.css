@@ -9,7 +9,7 @@
 
 @keyframes slide-up{
    from  {
-        transform: translateY(100px);
+        transform: translateY(6.25rem);
     }
     to {
         transform: translateY(0);
@@ -18,7 +18,7 @@
   
 @keyframes slide-left {
     from  {
-         transform: translateX(100px);
+         transform: translateX(6.25rem);
      }
      to {
          transform: translateX(0);
@@ -27,7 +27,7 @@
 
 @keyframes slide-right {
     from  {
-         transform: translateX(-100px);
+         transform: translateX(-6.25rem);
      }
      to {
          transform: translateX(0);
@@ -36,7 +36,7 @@
 
 @keyframes slide-down {
     from  {
-         transform: translateY(-100px);
+         transform: translateY(-6.25rem);
      }
      to {
          transform: translateY(0);
@@ -124,7 +124,7 @@ nav ul li a:hover,
 }
 
 .quantity-handler:hover{
-    border: 1px solid var(--primary-color);
+    border: 0.0625rem solid var(--primary-color);
     cursor: pointer;
     transform: scale(1.02);
     transition: all 0.1s ease-in;
@@ -161,7 +161,7 @@ nav ul li a:hover,
 }
 
 .card:hover{
-    border-bottom: 1px solid var(--font-color);
+    border-bottom: 0.0625rem solid var(--font-color);
     transform: scale(1.02);
     transition: all 0.1s ease-in;
 }
@@ -184,36 +184,11 @@ footer a:hover{
     transition: all 0.1s ease-in;
 }
 
-
-/*
-.explore__card:hover {
-    transform: scale(1.02);
-    transition: all 0.1s ease-in;
+.open-cart{
+    animation: fade 0.5s ease-in, slide-left 0.5s ease-in;
 }
 
-.button-white:hover {
-    border: 1px solid var(--light-gray);
-    color: var(--light-gray);
-    transform: scale(1.02);
-    transition: all 0.15s ease-in;
+.open-menu{
+    animation: fade 0.5s ease-in, slide-left 0.5s ease-in;
 }
 
-.button-black:hover{
-    text-decoration: none;
-    background-color: var(--gray);
-    transform: scale(1.02);
-    transition: all 0.15s ease-in;
-}
-
-.plan-button:hover {
-    background-color: var(--gray);
-    transform: scale(1.02);
-    transition: all 0.15s ease-in;
-}
-
-.submit-button:hover {
-    background-color: var(--gray);
-    transform: scale(1.02);
-    transition: all 0.15s ease-in;
-}
-*/

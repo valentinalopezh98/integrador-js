@@ -10,7 +10,7 @@
 @media(max-width: 1200px){
     header{
         justify-content: space-between;
-        padding: 0 50px;
+        padding: 0 3.125rem;
     }
 
     .hero-bottom-left,
@@ -22,14 +22,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 30px;
+        font-size: 1.875rem;
     }
     
     .menu-icon{
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 30px;
+        font-size: 1.875rem;
     }
 
     .header-right{
@@ -58,7 +58,7 @@
     }
 
     .about-us-left{
-        padding-left: 30px;
+        padding-left: 1.875rem;
     }
 
     .about-left-img-1{
@@ -77,7 +77,7 @@
 
 @media(max-width: 850px){
     .hero-img{
-        max-width: 600px;
+        max-width: 37.5rem;
     }
 
     .hero-bottom-middle{
@@ -95,13 +95,13 @@
     }
 
     .hero-img{
-        width: 350px;
+        width: 21.875rem;
     }
 
     h1,
     .hero__title--highlight{
-        font-size: 30px;
-        width: 350px;
+        font-size: 1.875rem;
+        width: 21.875rem;
     }
 
     .categories-container{
@@ -110,43 +110,43 @@
 
     .footer-nav ul{
         flex-direction: column;
-        gap: 40px;
+        gap: 2.5rem;
     }
 
     #contact-form{
-        max-width: 350px;
+        max-width: 21.875rem;
     }
 
     .about-us h2 {
-        max-width: 350px;
+        max-width: 21.875rem;
         text-align: center;
-        padding: 0 10px 0 10px;
+        padding: 0 0.625rem 0 0.625rem;
     }
 
     .about-us p {
-        max-width: 350px;
+        max-width: 21.875rem;
         text-align: center;
-        padding: 0 10px 0 10px;
+        padding: 0 0.625rem 0 0.625rem;
     }
 
     
     .open-cart{
-        width: 350px;
-        top: 80px;
+        width: 21.875rem;
+        top: 5rem;
         right: 0;
-        height: calc(100vh - 80px);
-        padding: 50px 20px;
-        gap: 20px;
-        overflow-y: scroll;
-        min-width: 350px;
+        height: calc(100vh - 5rem);
+        padding: 3.125rem 1.25rem;
+        gap: 1.25rem;
+        min-width: 21.875rem;
     }
 
+
     .product-name{
-        max-width: 80px;
+        max-width: 5rem;
     }
     
     .product-artist{
-        max-width: 80px;
+        max-width: 5rem;
     }
 
     .contact-right p {
@@ -154,7 +154,7 @@
     }
 
     .contact-info{
-        max-width: 350px;
+        max-width: 21.875rem;
     }
 
     .about-us{
@@ -170,8 +170,8 @@
     }
 
     .about-left-img-1{
-        width: 345px;
-        height: 345px;
+        width: 21.5625rem;
+        height: 21.5625rem;
         border-radius: 50%;
         overflow: hidden;
         object-fit: cover;
@@ -179,16 +179,26 @@
     }
 
     .categories-container{
-        max-width: 350px;
-        gap: 20px;
+        max-width: 21.875rem;
+        gap: 1.25rem;
     }
 
     .products-container{
-        max-width: 350px;
-        padding: 20px 10px;
+        max-width: 21.875rem;
+        padding: 1.25rem 0.625rem;
     }
 
     footer{
-        width: 350px;
+        width: 21.875rem;
+    }
+
+    .products-section h2{
+        text-align: center;
+        max-width: 350px;
+    }
+
+    .add-modal{
+        font-size: 13px;
+        text-align: center;
     }
 }

@@ -31,12 +31,12 @@ body {
 
 .header {
     width: 100%;
-    height: 60px;
+    height: 3.75rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
-    padding: 0 60px;
+    margin-top: 1.875rem;
+    padding: 0 3.75rem;
     background-color: transparent;
     position: fixed;
     top: 0;
@@ -44,7 +44,7 @@ body {
 }
 
 .header__title a img {
-    width: 200px;
+    width: 12.5rem;
  }
 
 .main {
@@ -52,26 +52,26 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
 .card {
     width: 80%;
-    max-width: 350px;
-    height: 450px;
-    padding: 20px;
+    max-width: 21.875rem;
+    height: 28.125rem;
+    padding: 1.25rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    gap: 20px;
-    border-radius: 10px;
+    gap: 1.25rem;
+    border-radius: 0.625rem;
     background: rgba(170, 160, 160, 0.11);
-    border-radius: 16px;
+    border-radius: 1rem;
 }
 
 .card img {
-    width: 100px;
+    width: 6.25rem;
     opacity: 50%;
 }
 
@@ -80,7 +80,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .mail,
@@ -91,9 +91,9 @@ body {
 .input {
     color: var(--font-color);
     border: none;
-    height: 20px;
+    height: 1.25rem;
     background-color: transparent;
-    border-bottom: 1px solid #777777;
+    border-bottom: 0.0625rem solid #777777;
 }
 
 .input::placeholder{
@@ -102,35 +102,35 @@ body {
 
 .login-icon {
     color: #777777;
-    font-size: 1rem;
+    font-size: 16px;
 }
 
 .options {
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
-    gap: 10px;
+    gap: 0.625rem;
     flex-direction: row;
 }
 
 #error-message{
-    font-size: 14px;
+    font-size: 0.875rem;
     color: var(--secondary-color);
 }
 
 .btn{
     width: 100%;
     background-color:rgba(170, 160, 160, 0.11);
-    border: 2px solid white;
+    border: 0.125rem solid white;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 50px;
+    padding: 0.625rem 3.125rem;
     color: white;
     text-transform: uppercase;
     position: relative;
     cursor: pointer;
-    margin-top: 15px;
+    margin-top: 0.9375rem;
 }
 
 .btn:hover{
@@ -143,13 +143,13 @@ body {
     align-items: center;
     justify-content: center;
     padding: 0 0;
-    height: 40px;
+    height: 2.5rem;
     position: relative;
     cursor: pointer;
 }
 
 .option-text {
-    font-size: 0.75rem;
+    font-size: 12px;
 }
 
 .option-text-hover:hover {
@@ -158,20 +158,20 @@ body {
 }
 
 .input-container.error input{
-    border-bottom: 2px solid #e62a5c;
+    border-bottom: 0.125rem solid #e62a5c;
 }
 
 .input-container small{
-    margin-top: 5px;
+    margin-top: 0.3125rem;
     color: #e62a5c;
     text-align: center;
     display: none;
-    max-width: 180px;
-    font-size: 10px;
+    max-width: 11.25rem;
+    font-size: 0.625rem;
 }
 
 .input-container.success input{
-    border-bottom: 2px solid #1fc42f;
+    border-bottom: 0.125rem solid #1fc42f;
 }
 
 @keyframes spin {

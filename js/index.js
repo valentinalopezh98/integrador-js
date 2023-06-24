@@ -233,7 +233,12 @@ const isInactiveFilterBtn = (element) => {
 
   // cerrar en scroll 
   const closeOnScroll = () => {
-    if (!menuIcon.classList.contains("open-menu") && !cartIcon.classList.contains("open-cart")) return;
+    if (
+      !menu.classList.contains("open-menu") && 
+      !cart.classList.contains("open-cart")
+      ) 
+      return;
+
     overlay.classList.remove("show-overlay");
     menu.classList.remove("open-menu");
     cart.classList.remove("open-cart");

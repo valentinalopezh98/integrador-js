@@ -18,7 +18,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px; 
+    scroll-padding-top: 5rem; 
 }
 
 body{
@@ -36,19 +36,19 @@ body{
 header{
     box-sizing: border-box;
     width: 100%;
-    height: 80px;
+    height: 5rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 3;
     background-color: var(--bg-color);
 }
 
 header a img{
-    width: 120px;
+    width: 7.5rem;
 }
 
 nav{
@@ -59,13 +59,13 @@ nav ul{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 80px;
+    gap: 5rem;
 }
 
 nav ul li a{
     color: var(--font-color);
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 0.125rem;
     font-weight: 100;
 }
 
@@ -73,11 +73,11 @@ nav ul li a{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 0.625rem;
 }
 .header-right a{
     color: var(--font-color);
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .mobile{
@@ -89,11 +89,11 @@ nav ul li a{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 1.875rem;
 }
 
 .icons i {
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .cart-icon{
@@ -120,22 +120,22 @@ nav ul li a{
 
 .overlay {
     position: absolute;
-    top: 80px;
+    top: 5rem;
     left: 0;
     height: 100vh;
     width: 100%;
     z-index: 1; 
     background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 8px 32px 0 rgba(1, 2, 5, 0.37);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0 0.5rem 2rem 0 rgba(1, 2, 5, 0.37);
+    backdrop-filter: blur(0.3125rem);
+    -webkit-backdrop-filter: blur(0.3125rem);
     display: none;
 }
 
 .open-menu{
     position: absolute;
-    height: calc(100vh - 80px);
-    top: 80px;
+    height: calc(100vh - 5rem);
+    top: 5rem;
     right: 0;
     width: 70%;
     z-index: 2;
@@ -143,14 +143,14 @@ nav ul li a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    overflow-y: scroll;
 }
 
 .cart{
     display: none;
 }
 
-.open-cart{
+.open-cart{    
     position: absolute;
     width: 450px;
     top: 80px;
@@ -161,12 +161,15 @@ nav ul li a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 30px;
     overflow-y: scroll;
     z-index: 2;
     min-width: 375px;
     color: var(--font-color);
+}
+
+.open-cart::-webkit-scrollbar {
+    display: none;
 }
 
 .cart-icon i{
@@ -175,15 +178,15 @@ nav ul li a{
 
 .cart-bubble {
     position: absolute;
-    top: -8px;
-    right: -8px;
+    top: -0.5rem;
+    right: -0.5rem;
     text-align: center;
     background: var(--secondary-color);
     color: var(--font-color);
-    font-size: 10px;
+    font-size: 0.625rem;
     font-weight: 600;
-    height: 18px;
-    width: 18px;
+    height: 1.125rem;
+    width: 1.125rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -196,11 +199,11 @@ nav ul li a{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 0.625rem;
 }
 
 .open-cart .btn{
-    max-width: 300px;
+    max-width: 18.75rem;
 }
 
 .show-overlay{
@@ -212,22 +215,22 @@ nav ul li a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 10px;
-    padding: 15px;
-    border: 1px solid var(--font-color);
-    border-radius: 8px;
+    margin: 0.625rem;
+    padding: 0.9375rem;
+    border: 0.0625rem solid var(--font-color);
+    border-radius: 0.5rem;
 }
 
 .product{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 0.9375rem;
 }
 
 .product-img-container{
-    width: 80px;
-    border-radius: 8px;
+    width: 5rem;
+    border-radius: 0.5rem;
     overflow: hidden;
 }
 
@@ -236,7 +239,7 @@ nav ul li a{
 }
 
 .product-info{
-    height: 70px;
+    height: 4.375rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -245,9 +248,9 @@ nav ul li a{
 }
 
 .product-name{
-    max-width: 150px;
+    max-width: 9.375rem;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 500;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -256,9 +259,9 @@ nav ul li a{
 
 .product-artist{
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 300;
-    max-width: 150px;
+    max-width: 9.375rem;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -266,7 +269,7 @@ nav ul li a{
 
 .product-price{
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 800;
 }
 
@@ -275,26 +278,26 @@ nav ul li a{
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 10px;
+    gap: 0.625rem;
 }
 
 .quantity-handler{
-    width: 30px;
-    height: 30px;
-    padding: 4px 8px;
-    border: 1px solid var(--font-color);
-    border-radius: 8px;
+    width: 1.875rem;
+    height: 1.875rem;
+    padding: 0.25rem 0.5rem;
+    border: 0.0625rem solid var(--font-color);
+    border-radius: 0.5rem;
 }
 
 
 .divider {
-    margin-top: 20px;
-    border: 1px solid var(--font-color);
+    margin-top: 1.25rem;
+    border: 0.0625rem solid var(--font-color);
     width: 100%;
 }
 
 .btn-delete{
-    margin-top: 10px;
+    margin-top: 0.625rem;
     border: none;
     background-color: var(--bg-color);
     color: white;
@@ -308,7 +311,7 @@ nav ul li a{
 main,
 .hero{
     width: 100%;
-    max-width: 1400px;
+    max-width: 87.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -323,7 +326,7 @@ main,
 }
 
 .add-modal {
-    padding: 15px 0px;
+    padding: 0.9375rem 0rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -343,12 +346,12 @@ main,
 
 /* Hero  */
 section{
-    margin-top: 80px;
+    margin-top: 5rem;
 }
 
 .hero-img{
     width: 100%;
-    max-width: 800px;
+    max-width: 50rem;
     position: relative;
 }
 
@@ -362,7 +365,7 @@ section{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 2.5rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -372,14 +375,14 @@ section{
 h1{
     text-align: center;
     text-transform: uppercase;
-    width: 500px;
-    font-size: 40px;
+    width: 31.25rem;
+    font-size: 2.5rem;
     font-weight: 500;
 }
 
 .hero__title--highlight {
-    padding: 0 5px;
-    font-size: 40px;
+    padding: 0 0.3125rem;
+    font-size: 2.5rem;
     background: linear-gradient(to bottom, transparent 50%, var(--primary-color) 50% );
 }
 
@@ -393,13 +396,13 @@ h1{
 
 
 .hero-bottom-section{
-    margin: 0 50px;
+    margin: 0 3.125rem;
     width: 100%;
 }
 
 .hero-bottom{
     width: 100%;
-    height: 80px;
+    height: 5rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -410,7 +413,7 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .hero-bottom-left a{
@@ -419,7 +422,7 @@ h1{
 
 
 .hero-bottom-left a i {
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 
@@ -429,13 +432,13 @@ h1{
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    padding: 15px;
-    gap: 20px;
+    padding: 0.9375rem;
+    gap: 1.25rem;
 }
 
 .album-preview{
-    width: 35px;
-    height: 35px;
+    width: 2.1875rem;
+    height: 2.1875rem;
     border-radius: 50%;
     overflow: hidden;
     filter: brightness(0.6);
@@ -448,11 +451,11 @@ h1{
 
 .btn{
     background-color: var(--bg-color);
-    border: 2px solid white;
+    border: 0.125rem solid white;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 50px;
+    padding: 0.625rem 3.125rem;
     color: white;
     text-transform: uppercase;
     position: relative;
@@ -468,7 +471,7 @@ h1{
     position: absolute;
     width: 100%;
     height: 100%;
-    border: 2px solid white;
+    border: 0.125rem solid white;
     top: 20%;
     left: 4%;
     z-index: -1;
@@ -487,14 +490,14 @@ h1{
 
 .disabled-btn{
     background-color: var(--font-grey);
-    border: 2px solid var(--font-grey);
+    border: 0.125rem solid var(--font-grey);
     color: var(--bg-color);
     cursor: not-allowed;
 }
 
 .disabled-btn:hover{
     background-color: var(--font-grey);
-    border: 2px solid var(--font-grey);
+    border: 0.125rem solid var(--font-grey);
     color: var(--bg-color);
     cursor: not-allowed;
 }
@@ -514,21 +517,21 @@ h1{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 30px;
+    padding: 1.875rem;
 }
 
 .about-us-left{
-    padding-left: 100px;
+    padding-left: 6.25rem;
 }
 
 .about-us-right{
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 
 .about-left-img-1{
-    width: 350px;
-    height: 350px;
+    width: 21.875rem;
+    height: 21.875rem;
     border-radius: 50%;
     overflow: hidden;
     object-fit: cover;
@@ -540,8 +543,8 @@ h1{
 }
 
 .about-left-img-2{
-    width: 300px;
-    height: 300px;
+    width: 18.75rem;
+    height: 18.75rem;
     border-radius: 50%;
     overflow: hidden;
     align-self: flex-end;
@@ -552,29 +555,29 @@ h1{
 }
 
 h2{
-    font-size: 39px;
+    font-size: 2.4375rem;
     text-transform: uppercase;
     font-weight: 500;
-    letter-spacing: 2px;
+    letter-spacing: 0.125rem;
 }
 
 .about-us-right h2 {
-    width: 500px;
+    width: 31.25rem;
 }
 
 h2 span{
-    font-size: 39px;
+    font-size: 2.4375rem;
     text-transform: uppercase;
     font-weight: 100;
-    letter-spacing: 2px;   
+    letter-spacing: 0.125rem;   
 }
 
 .about-us-right-img{
-    width: 300px;
+    width: 18.75rem;
 }
 
 .about-us-right p {
-    width: 500px;
+    width: 31.25rem;
     font-weight: 200;
 }
 
@@ -586,22 +589,26 @@ h2 span{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 1.875rem;
+}
+
+.products-section h2{
+    text-align: center;
 }
 
 .categories-container
 {
     width: 100%;
-    height: 50px;
+    height: 3.125rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 1.875rem;
 }
 
 .categories-container p{
-    font-size: 18px;
+    font-size: 1.125rem;
     text-transform: uppercase;
     font-weight: 300;
 }
@@ -611,11 +618,11 @@ h2 span{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 25px;
+    gap: 1.5625rem;
 }
 
 .categories-container ul li{
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 100;
 }
 
@@ -626,8 +633,8 @@ h2 span{
 }
 
 .selected{
-    width: 30px;
-    height: 30px;
+    width: 1.875rem;
+    height: 1.875rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -642,24 +649,24 @@ h2 span{
 
 .products-container{
     width: 100%;
-    padding: 20px 50px;
+    padding: 1.25rem 3.125rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 35px;
+    gap: 2.1875rem;
 }
 
 .card{
-    width: 250px;
+    width: 15.625rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 0.9375rem;
     position: relative;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
+    margin-bottom: 0.625rem;
+    padding-bottom: 0.625rem;
 }
 
 .rate{
@@ -667,13 +674,13 @@ h2 span{
     align-items: center;
     justify-content: center;
     position: absolute;
-    width: 30px;
-    height: 30px;
-    top: -15px;
-    right: -15px;
+    width: 1.875rem;
+    height: 1.875rem;
+    top: -0.9375rem;
+    right: -0.9375rem;
     border-radius: 50%;
     background-color: var(--secondary-color);
-    padding: 5px;
+    padding: 0.3125rem;
 }
 
 .card img{
@@ -691,8 +698,8 @@ h2 span{
 
 .genre-year{
     text-align: center;
-    width: 250px;
-    font-size: 10px;
+    width: 15.625rem;
+    font-size: 0.625rem;
     color: var(--font-grey);
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -702,9 +709,9 @@ h2 span{
 
 .name-artist{
     text-align: center;
-    width: 250px;
+    width: 15.625rem;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -712,7 +719,7 @@ h2 span{
 }
 
 .name-artist span{
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 100;   
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -728,7 +735,7 @@ h2 span{
 }
 
 .price{
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 700;
 }
 
@@ -736,7 +743,7 @@ h2 span{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 0.3125rem;
 }
 
 .add{
@@ -744,26 +751,26 @@ h2 span{
     background-color: var(--bg-color);
     color: var(--font-color);
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 500;
     cursor: pointer;
 }
 
 .add-to-cart .add i {
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 /* Contacto  */
 
 .contact {
     width: 100%;
-    max-width: 1400px;
+    max-width: 87.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 80px;
-    min-height: 500px;
+    gap: 5rem;
+    min-height: 31.25rem;
 }
 
 .contact-left,
@@ -776,11 +783,11 @@ h2 span{
 
 .contact-left{
     align-items: flex-start; 
-    gap: 25px; 
+    gap: 1.5625rem; 
 }
 
 .contact-info {
-    line-height: 40px;
+    line-height: 2.5rem;
 }
 
 .contact .redes a {
@@ -788,29 +795,29 @@ h2 span{
 }
 
 .contact .redes a i{
-    font-size: 30px;
+    font-size: 1.875rem;
 }
 
 
 .contact-right p {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 #contact-form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .input{
     width: 100%;
-    height: 35px;
-    padding-left: 5px;
+    height: 2.1875rem;
+    padding-left: 0.3125rem;
 }
 
 textarea{
-    height: 70px;
-    padding: 5px;
+    height: 4.375rem;
+    padding: 0.3125rem;
 }
 
 .btn-submit{
@@ -818,7 +825,7 @@ textarea{
     align-items: center;
     justify-content: center;
     padding: 0 0;
-    height: 40px;
+    height: 2.5rem;
     position: relative;
     cursor: pointer;
 }
@@ -827,7 +834,7 @@ textarea{
     width: 100%;
     text-align: center;
     color: #e5587d;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 
@@ -835,26 +842,26 @@ textarea{
 
 footer{
     width: 100%;
-    max-width: 1400px;
+    max-width: 87.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 60px;
-    border-top: 1px solid var(--font-grey);
-    gap: 30px;
-    margin-bottom: 5px;
+    margin-top: 3.75rem;
+    border-top: 0.0625rem solid var(--font-grey);
+    gap: 1.875rem;
+    margin-bottom: 0.3125rem;
 }
 
 footer a img{
-    width: 150px;
+    width: 9.375rem;
 }
 
 .redes{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 25px;
+    gap: 1.5625rem;
 }
 
 footer a{
@@ -863,11 +870,11 @@ footer a{
 
 
 footer a i {
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 footer p{
-    font-size: 14px;
+    font-size: 0.875rem;
     color: var(--font-grey);
     font-weight: 200;
 }
